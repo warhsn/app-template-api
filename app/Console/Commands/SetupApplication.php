@@ -16,6 +16,8 @@ class SetupApplication extends Command
         $this->info('🚀 Starting application setup...');
         $this->newLine();
 
+        $this->call('passport:install');
+
         // Option to run fresh migrations
         if ($this->option('fresh')) {
             $this->info('🔄 Running fresh migrations...');
