@@ -72,10 +72,6 @@ class SetupApplication extends Command
         $this->table(['Command', 'Description'], [
             ['app:setup', 'Run this command to set up the application'],
             ['app:setup --fresh', 'Run with fresh migrations before setup'],
-            ['populate:device-types', 'Populate device types only'],
-            ['program:populate-types', 'Populate program types only'],
-            ['app:populate-notification-types', 'Populate notification types only'],
-            ['app:populate-abilities', 'Populate roles and abilities only'],
         ]);
 
         $this->info('💡 Your application is now ready to use!');
