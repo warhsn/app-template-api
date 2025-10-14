@@ -29,12 +29,10 @@ Route::middleware('auth:api')->group(function () {
     // Users
     Route::get('users', PaginatedUsers::class)->name('users.paginated');
     Route::post('users', CreateUser::class)->name('users.create');
-    Route::get('users/export-xlsx', ExportUserXlsx::class)->name('users.exportXlsx');
     Route::get('users/{user}', LoadUser::class)->name('users.load');
     Route::put('users/{user}', UpdateUser::class)->name('users.update');
     Route::post('users/{user}/password', ResetPassword::class)->name('users.password');
 
     // Meta Data
     Route::get('user-roles', LoadRoles::class)->name('meta.userRoles');
-    Route::get('customer-user-list', LoadAllCustomersUserList::class)->name('meta.customerUserList');
 });
